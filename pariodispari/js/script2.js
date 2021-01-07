@@ -1,6 +1,5 @@
 var ParioDispari;
 var numberUtente;
-// var numberUtente=prompt('Inserisci un numero tra 1 e 5');
 function numberRandom(min,max)
 {return Math.floor(Math.random()*(max+1-min)+min);
 }
