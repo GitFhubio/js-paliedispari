@@ -1,4 +1,4 @@
-var ParioDispari = prompt('Scegli pari o dispari');
+var ParioDispari;
 var numberUtente;
 // var numberUtente=prompt('Inserisci un numero tra 1 e 5');
 function numberRandom(min,max)
@@ -10,27 +10,21 @@ function isPari(num)
   {return true;}
   else{return false;}
 }
-
 function isValido(num)
 {if(!isNaN(num) && num>=1 && num<=5)
 {return true;
 } else{return false;}
 }
-
-function inserisciNumero(){
- return  numberUtente=parseInt(prompt('Inserisci un numero tra 1 e 5'));
-}
-
-while(!isValido(inserisciNumero()))
-{inserisciNumero();}
+function gioco(){
+ParioDispari = prompt('Scegli pari o dispari');
+while(!isValido(numberUtente))
+{numberUtente=parseInt(prompt('Inserisci un numero tra 1 e 5'));}
 
 var random=numberRandom(1,5);
 console.log(random);
 var somma=numberUtente+random;
 
 
-
-function gioco(){
 if(ParioDispari=='pari')
 {
   if(isPari(somma))
@@ -46,6 +40,5 @@ else if (ParioDispari=='dispari')
   else{alert('Hai perso')}
 }
 }
-
 
 gioco();
