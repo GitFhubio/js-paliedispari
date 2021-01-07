@@ -36,18 +36,19 @@ while(!isValidoNumero(numberUtente))
 
 var random=numberRandom(1,5);
 var somma=numberUtente+random;
+var risposta='Il computer ha inserito '+random+',la somma è '+somma;
 if(ParioDispari=='pari')
 {
   if(isPari(somma))
-  {alert('Il computer ha inserito '+random+',la somma è '+somma+' :hai vinto')}
-  else{alert('Il computer ha inserito '+random+',la somma è '+somma+ ' :hai perso')}
+  {alert(risposta+' :hai vinto')}
+  else{alert(risposta+' :hai perso')}
 
 }
 else if (ParioDispari=='dispari')
 {
     if(isPari(somma))
-  {alert('Il computer ha inserito '+random+',la somma è '+somma+' :hai vinto')}
-  else{alert('Il computer ha inserito '+random+',la somma è '+somma+ ' :hai perso')}
+  {alert(risposta+' :hai vinto')}
+  else{alert(risposta+' :hai perso')}
 
 }
 
