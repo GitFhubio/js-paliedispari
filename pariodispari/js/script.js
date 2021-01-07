@@ -23,7 +23,7 @@ function isValidoNumero(num)
 } else{return false;}
 }
 function isValidaScelta(scelta)
-{if(scelta!=='pari' && scelta!='dispari')
+{if(scelta!=='pari' && scelta!=='dispari')
 {return false;}else{
   return true;
 }
