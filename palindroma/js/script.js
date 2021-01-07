@@ -2,7 +2,7 @@
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
-var parolaUtente=prompt('Inserisci una parola');
+var parolaUtente='';
 
 function isValida(parola){
   if(isNaN(parola) && parola.length>2){
@@ -12,6 +12,10 @@ else{
   return false;
 }
 }
+
+while(!isValida(parolaUtente))
+{parolaUtente=prompt('Inserisci una parola');}
+
 function isPalindroma(parola){
 var parolarovescia=[];
 // Nota1:Al solito parolarovescia anziché essere array poi riempito col push poteva rimanere stringa inizializzata con ''
@@ -31,16 +35,13 @@ else{
 }
 
 }
-if (isValida(parolaUtente))
-{if (isPalindroma(parolaUtente))
+
+if (isPalindroma(parolaUtente))
 
   {alert('La parola è palindroma');}
 else{
   alert('La parola non è palindroma')
 }
-}
-else {
-  alert('Devi inserire una parola')
-}
+
 
 // Nota 2:Versione script3 con function reverse

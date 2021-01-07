@@ -36,7 +36,7 @@ while(!isValidoNumero(numberUtente))
 
 random=numberRandom(1,5);
 somma=numberUtente+random;
-risposta='Il computer ha inserito '+random+',la somma è '+somma;
+risposta='Hai scelto '+ParioDispari+' ,il computer ha inserito '+random+' ,la somma è '+somma;
 
   if((isPari(somma) && isPari(ParioDispari)) || (!isPari(somma) && !isPari(ParioDispari)))
   {alert(risposta+' :hai vinto')}
@@ -48,6 +48,5 @@ else
 }
 gioco();
 
-// Nota: lo script 3 era quello di base ed è scritto peggio,
-// in questo script  ho inglobato in isPari anche condizione su stringa=='pari'
+// Nota: in questo script  ho inglobato in isPari anche condizione su stringa=='pari'
 // oltre che su numero % 2 per compattare, quindi questo script è più leggibile di script2
