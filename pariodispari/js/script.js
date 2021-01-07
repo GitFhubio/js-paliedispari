@@ -47,8 +47,8 @@ if(ParioDispari=='pari')
 else if (ParioDispari=='dispari')
 {
     if(isPari(somma))
-  {alert(risposta+' :hai vinto')}
-  else{alert(risposta+' :hai perso')}
+  {alert(risposta+' :hai perso')}
+  else{alert(risposta+' :hai vinto')}
 
 }
 
