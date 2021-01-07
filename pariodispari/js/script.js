@@ -4,8 +4,6 @@
 // Sommiamo i due numeri
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
-
-
 var ParioDispari;
 var numberUtente;
 var random;
@@ -15,10 +13,9 @@ function numberRandom(min,max)
 {return Math.floor(Math.random()*(max+1-min)+min);
 }
 function isPari(num)
-{ num=parseInt(num);
-  if(num % 2 === 0)
+{if(parseInt(num) % 2 === 0 || num=='pari')
   {return true;}
-  else{return false;}
+  else {return false;}
 }
 function isValidoNumero(num)
 {if(!isNaN(num) && num>=1 && num<=5)
@@ -40,25 +37,17 @@ while(!isValidoNumero(numberUtente))
 random=numberRandom(1,5);
 somma=numberUtente+random;
 risposta='Il computer ha inserito '+random+',la somma è '+somma;
-if(ParioDispari=='pari')
-{
-  if(isPari(somma))
+
+  if((isPari(somma) && isPari(ParioDispari)) || (!isPari(somma) && !isPari(ParioDispari)))
   {alert(risposta+' :hai vinto')}
-  else{alert(risposta+' :hai perso')}
 
-}
-else if (ParioDispari=='dispari')
+else
 {
-    if(isPari(somma))
-  {alert(risposta+' :hai perso')}
-  else{alert(risposta+' :hai vinto')}
-
+  alert(risposta+' :hai perso')
 }
-
 }
-
 gioco();
 
-// Nota: lo script 2 era quello di base ed è scritto peggio,
-// nello script3 ho inglobato in isPari anche condizione su stringa=='pari'
-// oltre che su numero % 2 per compattare, quindi script3 è più leggibile
+// Nota: lo script 3 era quello di base ed è scritto peggio,
+// in questo script  ho inglobato in isPari anche condizione su stringa=='pari'
+// oltre che su numero % 2 per compattare, quindi questo script è più leggibile di script2
