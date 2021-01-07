@@ -1,20 +1,28 @@
-var tuaparola=prompt('Inserisci una parola ti dirò se è palindroma');
+// Palindroma
+// Chiedere all’utente di inserire una parola
+// Creare una funzione per capire se la parola inserita è palindroma
 
-function is_palindroma (parola){
+var parolaUtente=prompt('Inserisci una parola');
+
+function isPalindroma(parola){
+var parolarovescia=[];
+if(isNaN(parola)){
 parola=parola.toLowerCase();
-var array= parola.split('');
-array.reverse();
-var parolareverse=array.join('')
-
-if (parola===parolareverse)
-
-{return true;}
-
-else{return false;}
+for (var i=parola.length-1; i>=0;i--) {
+parolarovescia.push(parola[i]);
 }
+parolarovescia=parolarovescia.join('');
 
-if (is_palindroma(tuaparola))
-{alert('La tua parola è palindroma')}
+if(parola==parolarovescia)
+{
+  alert('la parola è palindroma')
+}
 else{
-  alert('La tua parola non è palindroma');
+  alert('la parola non è palindroma')
 }
+} else{
+  alert('Devi inserire una parola')
+}
+}
+
+isPalindroma(parolaUtente);
