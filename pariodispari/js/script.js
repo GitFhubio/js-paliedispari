@@ -8,6 +8,9 @@
 
 var ParioDispari;
 var numberUtente;
+var random;
+var somma;
+var risposta;
 function numberRandom(min,max)
 {return Math.floor(Math.random()*(max+1-min)+min);
 }
@@ -34,9 +37,9 @@ while(!isValidaScelta(ParioDispari))
 while(!isValidoNumero(numberUtente))
 {numberUtente=parseInt(prompt('Inserisci un numero tra 1 e 5'));}
 
-var random=numberRandom(1,5);
-var somma=numberUtente+random;
-var risposta='Il computer ha inserito '+random+',la somma è '+somma;
+random=numberRandom(1,5);
+somma=numberUtente+random;
+risposta='Il computer ha inserito '+random+',la somma è '+somma;
 if(ParioDispari=='pari')
 {
   if(isPari(somma))
@@ -55,3 +58,7 @@ else if (ParioDispari=='dispari')
 }
 
 gioco();
+
+// Nota: lo script 2 era quello di base ed è scritto peggio,
+// nello script3 ho inglobato in isPari anche condizione su stringa=='pari'
+// oltre che su numero % 2 per compattare, quindi script3 è più leggibile
