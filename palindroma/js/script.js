@@ -14,11 +14,12 @@
 // }
 
 // Sopra è la base di partenza
-
 var input=prompt('Inserisci una parola');
+
 function isPalindroma(parola){
 var parolarovescia=[];
 if(isNaN(parola)){
+parola=parola.toLowerCase();
 for (var i=parola.length-1; i>=0;i--) {
 parolarovescia.push(parola[i]);
 }
