@@ -1,6 +1,5 @@
-var ParioDispari = prompt('Scegli pari o dispari');
-var numberUtente= parseInt(prompt('Dici un numero da 1 a 5'));
-
+var ParioDispari;
+var numberUtente;
 function numberRandom(min,max)
 {return Math.floor(Math.random()*(max+1-min)+min);
 }
@@ -10,8 +9,24 @@ function isPari(num)
   {return true;}
   else{return false;}
 }
+function isValidoNumero(num)
+{if(!isNaN(num) && num>=1 && num<=5)
+{return true;
+} else{return false;}
+}
+function isValidaScelta(scelta)
+{if(scelta!=='pari' && scelta!='dispari')
+{return false;}else{
+  return true;
+}
+}
+function gioco(){
+while(!isValidaScelta(ParioDispari))
+{ ParioDispari = prompt('Scegli pari o dispari');}
+while(!isValidoNumero(numberUtente))
+{numberUtente=parseInt(prompt('Inserisci un numero tra 1 e 5'));}
+
 var random=numberRandom(1,5);
-console.log(random);
 var somma=numberUtente+random;
 if(ParioDispari=='pari')
 {
@@ -27,3 +42,7 @@ else if (ParioDispari=='dispari')
   else{alert('Il computer ha inserito '+random+',la somma è '+somma+ ' :hai perso')}
 
 }
+
+}
+
+gioco();
