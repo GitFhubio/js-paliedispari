@@ -14,7 +14,7 @@ else{
 }
 function isPalindroma(parola){
 var parolarovescia=[];
-// Nota1:Al solito parolarovescia anziché essere array poi riempito col push poteva rimanere stringa così come era,inizializzata con ''
+// Nota1:Al solito parolarovescia anziché essere array poi riempito col push poteva rimanere stringa inizializzata con ''
 // e poi nel for parolarovescia+=parola[i] evitando join
 parola=parola.toLowerCase();
 for (var i=parola.length-1; i>=0;i--) {
