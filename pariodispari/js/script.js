@@ -16,14 +16,14 @@ var somma=numberUtente+random;
 if(ParioDispari=='pari')
 {
   if(isPari(somma))
-  {alert('Hai vinto')}
-  else{alert('Hai perso')}
+  {alert('Il computer ha inserito '+random+',la somma è '+somma+' :hai vinto')}
+  else{alert('Il computer ha inserito '+random+',la somma è '+somma+ ' :hai perso')}
 
 }
 else if (ParioDispari=='dispari')
 {
     if(isPari(somma))
-  {alert('Hai vinto')}
-  else{alert('Hai perso')}
+  {alert('Il computer ha inserito '+random+',la somma è '+somma+' :hai vinto')}
+  else{alert('Il computer ha inserito '+random+',la somma è '+somma+ ' :hai perso')}
 
 }

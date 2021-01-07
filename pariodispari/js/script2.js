@@ -9,35 +9,40 @@ function isPari(num)
   {return true;}
   else{return false;}
 }
-function isValido(num)
+function isValidoNumero(num)
 {if(!isNaN(num) && num>=1 && num<=5)
 {return true;
 } else{return false;}
 }
+function isValidaScelta(scelta)
+{if(scelta!=='pari' && scelta!='dispari')
+{return false;}else{
+  return true;
+}
+}
 function gioco(){
-ParioDispari = prompt('Scegli pari o dispari');
-while(!isValido(numberUtente))
+while(!isValidaScelta(ParioDispari))
+{ ParioDispari = prompt('Scegli pari o dispari');}
+while(!isValidoNumero(numberUtente))
 {numberUtente=parseInt(prompt('Inserisci un numero tra 1 e 5'));}
 
 var random=numberRandom(1,5);
-console.log(random);
 var somma=numberUtente+random;
-
-
 if(ParioDispari=='pari')
 {
   if(isPari(somma))
-  {alert('Hai vinto')}
-else
-{alert('Hai perso')}
+  {alert('Il computer ha inserito '+random+',la somma è '+somma+' :hai vinto')}
+  else{alert('Il computer ha inserito '+random+',la somma è '+somma+ ' :hai perso')}
 
 }
 else if (ParioDispari=='dispari')
 {
     if(isPari(somma))
-  {alert('Hai vinto')}
-  else{alert('Hai perso')}
+  {alert('Il computer ha inserito '+random+',la somma è '+somma+' :hai vinto')}
+  else{alert('Il computer ha inserito '+random+',la somma è '+somma+ ' :hai perso')}
+
 }
+
 }
 
 gioco();
