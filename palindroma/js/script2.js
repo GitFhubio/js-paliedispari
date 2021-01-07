@@ -1,39 +1,19 @@
-// var parola=prompt('Inserisci una parola');
-// var parolarovescia=[];
-// for (var i=parola.length-1; i>=0;i--) {
-// parolarovescia.push(parola[i]);
-// }
-// parolarovescia=parolarovescia.join('');
-//
-// if(parola==parolarovescia)
-// {
-//   alert('la parola è palindroma')
-// }
-// else{
-//   alert('la parola non è palindroma')
-// }
+var tuaparola=prompt('Inserisci una parola ti dirò se è palindroma');
 
-// Sopra è la base di partenza
+function is_palindroma (parola){
+var array= parola.split('');
+array.reverse();
+var parolareverse=array.join('')
 
-var input=prompt('Inserisci una parola');
-function isPalindroma(parola){
-var parolarovescia=[];
-if(isNaN(parola)){
-for (var i=parola.length-1; i>=0;i--) {
-parolarovescia.push(parola[i]);
+if (parola===parolareverse)
+
+{return true;}
+
+else{return false;}
 }
-parolarovescia=parolarovescia.join('');
 
-if(parola==parolarovescia)
-{
-  alert('la parola è palindroma')
-}
+if (is_palindroma(tuaparola))
+{alert('La tua parola è palindroma')}
 else{
-  alert('la parola non è palindroma')
+  alert('La tua parola non è palindroma');
 }
-} else{
-  alert('Devi inserire una parola')
-}
-}
-
-isPalindroma(input);
