@@ -23,7 +23,7 @@ if(ParioDispari=='pari')
 else if (ParioDispari=='dispari')
 {
     if(isPari(somma))
-  {alert('Il computer ha inserito '+random+',la somma è '+somma+' :hai vinto')}
-  else{alert('Il computer ha inserito '+random+',la somma è '+somma+ ' :hai perso')}
+  {alert('Il computer ha inserito '+random+',la somma è '+somma+' :hai perso')}
+  else{alert('Il computer ha inserito '+random+',la somma è '+somma+ ' :hai vinto')}
 
 }
