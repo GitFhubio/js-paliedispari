@@ -1,6 +1,7 @@
 var tuaparola=prompt('Inserisci una parola ti dirò se è palindroma');
 
 function is_palindroma (parola){
+parola=parola.toLowerCase();
 var array= parola.split('');
 array.reverse();
 var parolareverse=array.join('')
