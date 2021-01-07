@@ -12,9 +12,6 @@ else{
   return false;
 }
 }
-parolaUtente='';
-while(!isValida(parolaUtente))
-{parolaUtente=prompt('Inserisci una parola');}
 
 function isPalindroma(parola){
 parolarovescia=[];
@@ -35,6 +32,10 @@ else{
 }
 
 }
+
+parolaUtente='';
+while(!isValida(parolaUtente))
+{parolaUtente=prompt('Inserisci una parola');}
 
 if (isPalindroma(parolaUtente))
 
