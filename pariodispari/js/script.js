@@ -12,34 +12,48 @@ var risposta;
 function numberRandom(min,max)
 {return Math.floor(Math.random()*(max+1-min)+min);
 }
-function isPari(num)
-{if(parseInt(num) % 2 === 0 || num=='pari')
-  {return true;}
-  else {return false;}
+// function isPari(num)
+// {if(parseInt(num) % 2 === 0)
+//   {return true;}
+//   else {return false;}
+// }
+
+function PariDispari(num)
+{if(parseInt(num) % 2 === 0)
+  {return 'pari';
 }
+  else {return 'dispari';
+}
+}
+
 function isValidoNumero(num)
 {if(!isNaN(num) && num>=1 && num<=5)
 {return true;
-} else{return false;}
+} else{return false;
+}
 }
 function isValidaScelta(scelta)
 {if(scelta!=='pari' && scelta!=='dispari')
-{return false;}else{
+{return false;
+}else{
   return true;
 }
 }
 function gioco(){
-while(!isValidaScelta(ParioDispari))
-{ ParioDispari = prompt('Scegli pari o dispari');}
-while(!isValidoNumero(numberUtente))
-{numberUtente=parseInt(prompt('Inserisci un numero tra 1 e 5'));}
+while(!isValidaScelta(ParioDispari)){
+  ParioDispari = prompt('Scegli pari o dispari');
+}
+while(!isValidoNumero(numberUtente)){
+  numberUtente=parseInt(prompt('Inserisci un numero tra 1 e 5'));
+}
 
 random=numberRandom(1,5);
 somma=numberUtente+random;
 risposta='Hai scelto '+ParioDispari+' ,il computer ha inserito '+random+' ,la somma è '+somma;
 
-  if((isPari(somma) && isPari(ParioDispari)) || (!isPari(somma) && !isPari(ParioDispari)))
-  {alert(risposta+' :hai vinto')}
+  if(PariDispari(somma)==ParioDispari){
+    alert(risposta+' :hai vinto');
+  }
 
 else
 {
@@ -47,6 +61,3 @@ else
 }
 }
 gioco();
-
-// Nota: in questo script  ho inglobato in isPari anche condizione su stringa=='pari'
-// oltre che su numero % 2 per compattare, quindi questo script è più leggibile di script2
